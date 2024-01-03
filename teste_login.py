@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 
-df = pd.DataFrame("tenistas.csv")
+df = pd.DataFrame(tenistas.csv)
 
 df.columns = ["nome", "usuario", "senha", "rank", "apelido" ]
 
