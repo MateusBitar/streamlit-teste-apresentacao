@@ -20,8 +20,8 @@ def main():
     if st.button("Login"):
         # Simples verificação de usuário e senha
         if not tenistas_df.empty and \
-           (tenistas_df['usuario'] == username).any() and \
-           (tenistas_df['senha'] == password).any():
+           (df['usuario'] == username).any() and \
+           (df['senha'] == password).any():
             st.success("Login bem-sucedido!")
             # Adicione aqui o redirecionamento ou ações que você deseja após o login
         else:
