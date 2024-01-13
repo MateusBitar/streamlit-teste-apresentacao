@@ -10,10 +10,8 @@ def main():
     link_url = "https://regulamentopeninsula.streamlit.app"
     
     # Utilizando .format() para formatar a string
-    texto_completo = "{} [{}]({}){{:target='_blank'}}".format(frase, link_text, link_url)
+    st.write(f"{frase} [{link_text}]({link_url})")
     
-    # Exibindo no Streamlit
-    st.write(texto_completo)
 
 
 if __name__ == "__main__":
