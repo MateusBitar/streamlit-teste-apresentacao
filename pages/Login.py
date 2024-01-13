@@ -35,7 +35,7 @@ if st.button("Login"):
             (df['usuario'] == username).any() and \
             (df['senha'] == password).any():
         st.success("Login bem-sucedido!")
-        st.switch_page("Ranking.py")
+        st.switch_page("pages/Ranking.py")
         # Adicione aqui o redirecionamento ou ações que você deseja após o login
     else:
         st.error("Usuário ou senha incorretos.")
