@@ -11,10 +11,10 @@ def main():
     
     # Utilizando .format() para formatar a string
     st.write(f"{frase} [{link_text}]({link_url})")
-
-
     
-
+    
+    if "logged_in" not in st.session_state:
+       st.session_state.logged_in = False
 
 if __name__ == "__main__":
     main()
