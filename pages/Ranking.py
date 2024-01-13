@@ -31,5 +31,4 @@ st.dataframe(
         },
     hide_index=True,
     )
-df = df.drop(list(df.index)[-1])
-df.to_csv(tenistas.csv, index = False)
+
