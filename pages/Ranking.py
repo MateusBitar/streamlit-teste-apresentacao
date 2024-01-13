@@ -32,7 +32,7 @@ st.dataframe(
     hide_index=True,
     )
 
- df = df.drop(df.rank[6])
-    
-    # Escrever o DataFrame de volta para o arquivo CSV
-    df.to_csv(nome_arquivo, index=False)
+df = df.drop(df.rank[6])
+
+# Escrever o DataFrame de volta para o arquivo CSV
+df.to_csv(nome_arquivo, index=False)
