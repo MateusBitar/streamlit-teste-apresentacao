@@ -34,4 +34,4 @@ st.dataframe(
 
 df = df.drop([6])
 # Escrever o DataFrame de volta para o arquivo CSV
-df.to_csv(tenistas.csv, index=False)
+df.to_csv("tenistas.csv", index=False)
