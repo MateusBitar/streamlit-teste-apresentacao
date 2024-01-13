@@ -2,6 +2,23 @@ import streamlit as st
 import pandas as pd
 import base64
 
+def main():
+    st.title("Bem Vindo ao ATP Peninsula")
+
+    frase = "Para saber um pouco mais do nosso regulamento clique"
+    
+    # Texto do link e URL
+    link_text = "aqui"
+    link_url = "https://regulamentopeninsula.streamlit.app"
+    
+    # Utilizando .format() para formatar a string
+    st.write(f"{frase} [{link_text}]({link_url})")
+    
+
+if __name__ == "__main__":
+    main()
+
+
 # Ler o CSV com os dados dos tenistas ou criar um DataFrame vazio se o arquivo não existir
 df = pd.read_csv("tenistas.csv")
 df = df.sort_values(by="rank")
@@ -23,12 +40,6 @@ def base64_to_image(base64_str):
 
 st.title("Tela do Ranking")
 
-
- # Verifica se o usuário está logado
-# if not st.session_state.get("logged_in", False):
-if not st.session_state.logged_in:
-    st.error("Você precisa fazer login para acessar o ranking.")
-    st.stop()
 
 st.dataframe(
     df[["rank","nome", "apelido", "foto"]],
