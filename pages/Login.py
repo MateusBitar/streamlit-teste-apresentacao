@@ -23,6 +23,13 @@ def image_to_base64(uploaded_file):
 def base64_to_image(base64_str):
     return base64.b64decode(base64_str)
 
+if st.session_state.get("logged_in", False):
+    st.error("Você já está logado!.")
+    st.write("Deseja sair?")
+    if st.button("Sim"):
+        st.session_state.logged_in = False
+        st.experimental_rerun()
+    st.stop()
 
 # Criando campos de entrada para usuário e senha
 username = st.text_input("Usuário")
@@ -36,8 +43,6 @@ if st.button("Login"):
             (df['senha'] == password).any():
         st.success("Login bem-sucedido!")
         st.switch_page("pages/Ranking.py")
-        # Adicione aqui o redirecionamento ou ações que você deseja após o login
+        st.session_state.logged_in = True
     else:
         st.error("Usuário ou senha incorretos.")
-
-
