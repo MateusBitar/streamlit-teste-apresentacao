@@ -43,7 +43,7 @@ if st.button("Login"):
             (df['senha'] == password).any():
         st.success("Login bem-sucedido!")
         st.session_state.logged_in = True
-        st.switch_page("pages/Ranking.py")
+        #st.switch_page("pages/Ranking.py")
         
     else:
         st.error("Usuário ou senha incorretos.")
