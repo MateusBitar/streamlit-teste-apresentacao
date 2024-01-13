@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Tela do Pagamento")
+st.title("Finalizar inscrição no Campeonato")
 
-st.write("Deseja Gerar o Pix?")
+# st.write("")
 
-if st.button("Sim"):
+if st.button("Gerar Pix"):
     st.image("frame.png")
