@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import base64
 
 # Ler o CSV com os dados dos tenistas ou criar um DataFrame vazio se o arquivo não existir
 df = pd.read_csv("tenistas.csv")
