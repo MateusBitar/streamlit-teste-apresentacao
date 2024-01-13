@@ -22,6 +22,16 @@ def base64_to_image(base64_str):
     return base64.b64decode(base64_str)
 
 
+st.title("Tela de Cadastro")
+
+
+if st.session_state.get("logged_in", False):
+    st.error("Você já está logado!.")
+    st.write("Deseja sair?")
+    if st.button("Sim"):
+        st.session_state.logged_in = False
+        st.experimental_rerun()
+    st.stop()
 
 st.title("Página de Cadastro")
 
@@ -67,4 +77,3 @@ if st.button("Cadastrar"):
             st.experimental_rerun()
     except Exception as e:
         st.error(f"Erro durante o cadastro: {e}")
-
