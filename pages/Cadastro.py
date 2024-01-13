@@ -33,7 +33,6 @@ if st.session_state.get("logged_in", False):
         st.experimental_rerun()
     st.stop()
 
-st.title("Página de Cadastro")
 
 # Criar campos de entrada para nome, usuário, senha e apelido
 nome = st.text_input("Nome")
