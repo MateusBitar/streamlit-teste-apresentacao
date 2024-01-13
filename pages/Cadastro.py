@@ -61,7 +61,7 @@ if st.button("Cadastrar"):
             df.to_csv("tenistas.csv", index=False)
 
             st.success("Cadastro bem-sucedido! Faça o login para continuar.")
-            st.switch_page("Login.py")
+            st.switch_page("pages/Login.py")
 
             # Adicionando um pequeno delay antes de redirecionar para a página de login
             st.experimental_rerun()
