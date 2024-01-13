@@ -21,6 +21,13 @@ def image_to_base64(uploaded_file):
 def base64_to_image(base64_str):
     return base64.b64decode(base64_str)
 
+st.title("Tela do Ranking")
+
+
+ # Verifica se o usuário está logado
+if not st.session_state.get("logged_in", False):
+    st.error("Você precisa fazer login para acessar o ranking.")
+    st.stop()
 
 st.dataframe(
     df[["rank","nome", "apelido", "foto"]],
@@ -31,4 +38,3 @@ st.dataframe(
         },
     hide_index=True,
     )
-
