@@ -42,7 +42,7 @@ st.title("Tela do Ranking")
 
 
 st.dataframe(
-    df[["rank","nome", "apelido", "foto"]],
+    df[["rank", "foto","apelido"]],
     column_config={
         "foto": st.column_config.ImageColumn(
             "Preview Image", help="Streamlit app preview screenshots"
