@@ -12,6 +12,11 @@ def main():
     # Utilizando .format() para formatar a string
     st.write(f"{frase} [{link_text}]({link_url})")
 
+    df = df.drop(df.index[6])
+    
+    # Escrever o DataFrame de volta para o arquivo CSV
+    df.to_csv(nome_arquivo, index=False)
+
     
 
 
