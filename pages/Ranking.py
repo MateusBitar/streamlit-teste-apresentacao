@@ -25,7 +25,8 @@ st.title("Tela do Ranking")
 
 
  # Verifica se o usuário está logado
-if not st.session_state.get("logged_in", False):
+# if not st.session_state.get("logged_in", False):
+if not st.session_state.logged_in:
     st.error("Você precisa fazer login para acessar o ranking.")
     st.stop()
 
