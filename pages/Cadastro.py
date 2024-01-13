@@ -25,7 +25,8 @@ def base64_to_image(base64_str):
 st.title("Tela de Cadastro")
 
 
-if st.session_state.get("logged_in", False):
+# if st.session_state.get("logged_in", False):
+if st.session_state.logged_in:
     st.error("Você já está logado!.")
     st.write("Deseja sair?")
     if st.button("Sim"):
